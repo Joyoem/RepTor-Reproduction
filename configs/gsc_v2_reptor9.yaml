@@ -1,0 +1,33 @@
+experiment:
+  name: gsc_v2_reptor9_paper_reproduction
+model:
+  name: reptor9
+  in_features: 40
+  num_classes: 12
+  width_mult: 1.0
+  dropout: 0.2
+features:
+  sample_rate: 16000
+  feature: mfcc
+  n_mfcc: 40
+  window_ms: 30
+  hop_ms: 10
+training:
+  epochs: 300
+  batch_size: 128
+  optimizer: sgd
+  learning_rate: 0.02
+  momentum: 0.9
+  weight_decay: 0.0001
+  scheduler: cosine
+  warmup_steps: 5
+augmentation:
+  time_shift: true
+  noise_injection: true
+  specaugment:
+    frequency_masking: true
+    time_masking: true
+    time_warping: true
+notes:
+  - "Values are transcribed from Park et al., Interspeech 2024 where specified."
+  - "Exact augmentation magnitudes are not fully specified in the paper and must be documented as reproduction choices."

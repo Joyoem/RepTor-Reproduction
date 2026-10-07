@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this reimplementation, please cite the original RepTor paper."
+title: "RepTor Reproduction"
+type: software
+references:
+  - type: conference-paper
+    title: "RepTor: Re-parameterizable Temporal Convolution for Keyword Spotting via Differentiable Kernel Search"
+    authors:
+      - family-names: "Park"
+        given-names: "Eunik"
+      - family-names: "Ahn"
+        given-names: "Daehyun"
+      - family-names: "Kim"
+        given-names: "Hyungjun"
+    year: 2024
+    conference:
+      name: "Interspeech 2024"

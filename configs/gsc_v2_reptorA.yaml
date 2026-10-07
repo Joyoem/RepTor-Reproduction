@@ -1,0 +1,27 @@
+experiment:
+  name: gsc_v2_reptorA_paper_reproduction
+model:
+  name: reptor_a
+  kernels: [7, 9, 5, 9, 5, 5]
+  in_features: 40
+  num_classes: 12
+  width_mult: 1.0
+  dropout: 0.2
+features:
+  sample_rate: 16000
+  feature: mfcc
+  n_mfcc: 40
+  window_ms: 30
+  hop_ms: 10
+training:
+  epochs: 300
+  batch_size: 128
+  optimizer: sgd
+  learning_rate: 0.02
+  momentum: 0.9
+  weight_decay: 0.0001
+  scheduler: cosine
+  warmup_steps: 5
+notes:
+  - "RepTor-A kernel sequence follows Figure 5 of the paper."
+  - "Differentiable architecture search itself is not required to train the fixed RepTor-A architecture."
